@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A I.A. Como Sócia Silenciosa | Dr. Reginaldo Oliveira</title>
+    <meta name="description" content="Descubra como profissionais liberais estão automatizando o trabalho e dobrando o faturamento sem contratar funcionários. O manual definitivo para a Nova Riqueza.">
+    <meta name="theme-color" content="#0F172A">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cinzel', 'serif'], // Fonte serifada elegante para os títulos, espelhando a capa
+                    },
+                    colors: {
+                        dark: {
+                            950: '#020617', // Ébano profundo
+                            900: '#0F172A', // Slate 900
+                            800: '#1E293B',
+                            700: '#334155',
+                        },
+                        gold: {
+                            300: '#FDE047',
+                            400: '#FACC15',
+                            500: '#EAB308', // Dourado principal
+                            600: '#CA8A04',
+                            700: '#A16207',
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'circuit-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23eab308' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'shimmer': 'shimmer 2.5s linear infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-1000px 0' },
+                            '100%': { backgroundPosition: '1000px 0' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Customizado para utilitários de Glassmorphism e gradientes avançados */
+       .glass-card {
+            background: rgba(30, 41, 59, 0.45);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(234, 179, 8, 0.15);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+       .text-gradient-gold {
+            background: linear-gradient(135deg, #FDE047 0%, #EAB308 50%, #A16207 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+       .btn-shimmer {
+            background: linear-gradient(90deg, #CA8A04 0%, #FACC15 50%, #CA8A04 100%);
+            background-size: 200% auto;
+            transition: 0.5s;
+        }
+       .btn-shimmer:hover {
+            background-position: right center;
+        }
+        /* Oculta scrollbar para estética mais limpa */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #020617; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #EAB308; 
+        }
+    </style>
+</head>
+<body class="bg-dark-950 text-slate-300 antialiased overflow-x-hidden selection:bg-gold-500 selection:text-dark-950 font-sans">
+
+    <div class="fixed inset-0 z-0 bg-circuit-pattern opacity-50 pointer-events-none"></div>
+    
+    <div class="fixed top-[-10%] left-[-10%] w-96 h-96 bg-gold-600/20 rounded-full mix-blend-screen filter blur-[128px] opacity-70 animate-blob pointer-events-none z-0"></div>
+    <div class="fixed bottom-[-10%] right-[-10%] w-[30rem] h-[30rem] bg-slate-800/40 rounded-full mix-blend-screen filter blur-[128px] opacity-70 animate-blob animation-delay-2000 pointer-events-none z-0"></div>
+
+    <nav class="fixed w-full z-50 glass-card border-b-0 border-white/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex flex-col">
+                    <span class="text-xl font-serif font-bold text-white tracking-widest uppercase">Dr. Reginaldo <span class="text-gold-500">Oliveira</span></span>
+                    <span class="text-[10px] text-slate-400 tracking-widest uppercase">Estrategista & Advogado Nômade</span>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#o-problema" class="text-sm font-medium text-slate-300 hover:text-gold-400 transition-colors">O Desafio</a>
+                    <a href="#a-solucao" class="text-sm font-medium text-slate-300 hover:text-gold-400 transition-colors">O Método C.O.R.E.</a>
+                    <a href="#autor" class="text-sm font-medium text-slate-300 hover:text-gold-400 transition-colors">A Autoridade</a>
+                    <a href="LINK_DA_KIWIFY_AQUI" class="btn-shimmer text-dark-950 px-6 py-2.5 rounded-sm font-bold tracking-wide uppercase text-sm shadow-[0_0_20px_rgba(234,179,8,0.3)] hover:shadow-[0_0_30px_rgba(234,179,8,0.5)] transition-all">
+                        Garantir Cópia
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden z-10 flex items-center min-h-[90vh]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-gold-500/50 text-gold-400 text-xs font-bold uppercase tracking-widest mb-8 animate-pulse-slow">
+                <span class="w-2 h-2 rounded-full bg-gold-500"></span>
+                O 9º Livro Publicado do Autor Best-Seller
+            </div>
+
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-extrabold text-white tracking-tight mb-6 leading-[1.1] max-w-6xl mx-auto drop-shadow-2xl">
+                A I.A. COMO <br class="hidden md:block" />
+                <span class="text-gradient-gold">SÓCIA SILENCIOSA</span>
+            </h1>
+            
+            <p class="text-lg md:text-2xl text-slate-400 mb-10 max-w-4xl mx-auto font-light leading-relaxed">
+                Descubra como profissionais liberais de alto nível estão automatizando fluxos de trabalho operacionais, eliminando a equipe humana e <strong class="text-white font-medium">dobrando o lucro líquido</strong> através de algoritmos.
+            </p>
+            
+            <div class="flex flex-col items-center justify-center gap-6 mb-16">
+                <a href="LINK_DA_KIWIFY_AQUI" class="w-full sm:w-auto text-center btn-shimmer animate-shimmer text-dark-950 px-12 py-5 rounded-md font-extrabold text-xl uppercase tracking-widest transition-all transform hover:scale-105 shadow-[0_15px_50px_rgba(234,179,8,0.4)] flex flex-col items-center group">
+                    <span>ACESSAR O MANUAL AGORA</span>
+                    <span class="text-xs font-medium text-dark-800 opacity-80 mt-1 group-hover:opacity-100">Apenas R$ 19,90 (Promoção de Lançamento)</span>
+                </a>
+                <p class="text-sm text-slate-500 flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    Valor real do livro: <span class="line-through">R$ 47,90</span>. Oferta por tempo limitado.
+                </p>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-gold-500/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </section>
+
+    <section id="o-problema" class="py-24 bg-dark-900 z-10 relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 relative">
+                    <div class="glass-card p-10 rounded-2xl relative z-10 border-l-4 border-l-red-500">
+                        <svg class="w-12 h-12 text-red-500/50 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="text-2xl font-serif font-bold text-white mb-4">A Ilusão do Trabalho Duro</h3>
+                        <p class="text-slate-400 leading-relaxed mb-6 italic">
+                            "A sociedade ensinou-lhe uma mentira perigosa. Disseram que, para faturar mais, você precisava trabalhar mais e montar grandes escritórios."
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 text-red-500 text-xs">✖</span>
+                                <span class="text-slate-300 text-sm"><strong>A Moeda do Tempo:</strong> Seu teto de faturamento está limitado às 24 horas do dia.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 text-red-500 text-xs">✖</span>
+                                <span class="text-slate-300 text-sm"><strong>Armadilha da Folha:</strong> Contratar equipe operacional destrói sua margem de lucro líquido e gera passivos trabalhistas constantes.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 text-red-500 text-xs">✖</span>
+                                <span class="text-slate-300 text-sm"><strong>O Caos do Atendimento:</strong> Clientes não qualificados drenando sua energia exigindo orçamentos gratuitos.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="absolute inset-0 bg-red-500/10 blur-[80px] rounded-full z-0 pointer-events-none"></div>
+                </div>
+                
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-gold-500 font-bold tracking-widest uppercase text-sm mb-4">A Quebra de Paradigma</h2>
+                    <h3 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6 leading-[1.2]">O Fim do Profissional Comum.</h3>
+                    <p class="text-lg text-slate-400 mb-6 leading-relaxed">
+                        Quando você tenta escalar contratando humanos para tarefas repetitivas (redação de contratos, pesquisa jurisprudencial, triagem de clientes), você troca liberdade por uma âncora financeira. 
+                    </p>
+                    <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+                        Entramos na era da <strong class="text-white">Nova Riqueza</strong>. A verdadeira alavancagem surge ao integrar uma entidade lógica capaz de processar milhões de dados em segundos, que nunca tira férias, não comete erros por cansaço e possui custo marginal próximo a zero.
+                    </p>
+                    <a href="LINK_DA_KIWIFY_AQUI" class="inline-flex items-center gap-2 text-gold-400 font-semibold hover:text-gold-300 transition-colors group">
+                        Descubra como hackear este sistema
+                        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="a-solucao" class="py-24 relative z-10 bg-dark-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-gold-500 font-bold tracking-widest uppercase text-sm mb-4">A Engenharia da Automação</h2>
+                <h3 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">O Ecossistema Mínimo Viável</h3>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto font-light">Neste livro, revelamos os 4 Pilares exatos para transformar Inteligência Artificial bruta em uma estrutura corporativa invisível e autônoma.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-8 rounded-xl hover:-translate-y-2 transition-all duration-300 group border-t-2 border-t-gold-500/20 hover:border-t-gold-500">
+                    <div class="w-12 h-12 rounded-lg bg-dark-900 border border-white/10 flex items-center justify-center mb-6 shadow-inner group-hover:bg-gold-500/20 transition-colors">
+                        <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-3">O Cérebro Central</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Implantação de Modelos de Linguagem Avançados utilizando a Engenharia de Prompts (Framework C.O.R.E.) para redação cirúrgica de contratos e estratégias.</p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-xl hover:-translate-y-2 transition-all duration-300 group border-t-2 border-t-gold-500/20 hover:border-t-gold-500">
+                    <div class="w-12 h-12 rounded-lg bg-dark-900 border border-white/10 flex items-center justify-center mb-6 shadow-inner group-hover:bg-gold-500/20 transition-colors">
+                        <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-3">Sistema Nervoso</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Automação de fluxos que conectam aplicativos. O trabalho de copiar, colar e formatar arquivos passa a ser executado nos bastidores em milissegundos.</p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-xl hover:-translate-y-2 transition-all duration-300 group border-t-2 border-t-gold-500/20 hover:border-t-gold-500">
+                    <div class="w-12 h-12 rounded-lg bg-dark-900 border border-white/10 flex items-center justify-center mb-6 shadow-inner group-hover:bg-gold-500/20 transition-colors">
+                        <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-3">Memória Institucional</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Alimentação de bases de conhecimento exclusivas para que a I.A. escreva, pense e diagnostique com a exata voz e nível técnico da sua marca.</p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-xl hover:-translate-y-2 transition-all duration-300 group border-t-2 border-t-gold-500/20 hover:border-t-gold-500">
+                    <div class="w-12 h-12 rounded-lg bg-dark-900 border border-white/10 flex items-center justify-center mb-6 shadow-inner group-hover:bg-gold-500/20 transition-colors">
+                        <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-3">Linha de Frente</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">O Atendimento Blindado. Funis robóticos que filtram curiosos e qualificam unicamente clientes High-Ticket antes que toquem no seu WhatsApp.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="LINK_DA_KIWIFY_AQUI" class="inline-block bg-dark-800 hover:bg-dark-700 border border-gold-500/30 text-white px-8 py-4 rounded-md font-medium transition-all shadow-lg hover:shadow-gold-500/20">
+                    Quero implementar estes 4 pilares no meu negócio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="autor" class="py-24 bg-dark-900 z-10 relative border-y border-white/5 overflow-hidden">
+        <div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-gold-900/10 to-transparent pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-5/12">
+                    <div class="relative w-full aspect-[4/5] max-w-sm mx-auto">
+                        <div class="absolute inset-0 bg-gold-500/20 translate-x-4 translate-y-4 rounded-sm border border-gold-500/30"></div>
+                        <div class="absolute inset-0 bg-dark-800 rounded-sm border border-white/10 z-10 flex items-center justify-center overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+                            <div class="text-center p-8">
+                                <span class="block text-4xl font-serif text-white/20 mb-4">DR. RO</span>
+                                <span class="text-xs text-slate-500 uppercase tracking-widest">Fotografia Oficial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-7/12">
+                    <div class="inline-flex items-center gap-2 mb-6 text-gold-400 text-sm font-bold uppercase tracking-widest">
+                        <span class="w-8 h-[1px] bg-gold-400"></span> A Mente por Trás da Estratégia
+                    </div>
+                    <h3 class="text-4xl font-serif font-bold text-white mb-2">Dr. Reginaldo Oliveira</h3>
+                    <p class="text-xl text-slate-500 mb-8 font-light">Especialista em Prática Penal Avançada (OAB/SC 57.879)</p>
+                    
+                    <div class="prose prose-invert prose-lg text-slate-400 mb-10 max-w-none">
+                        <p class="mb-4">
+                            Com uma trajetória forjada nos tribunais superiores e na Defesa Penal de Alta Complexidade, o Dr. Reginaldo vivenciou profundamente a rigidez do modelo industrial. Após décadas mantendo grandes estruturas e lidando com altos custos operacionais, compreendeu que o prestígio não reside no tamanho da folha de pagamentos, mas na otimização do conhecimento.
+                        </p>
+                        <p>
+                            Aos 50 anos, revolucionou seu próprio escritório, tornando-se o paradigma do Advogado Nômade. Fechou as operações físicas convencionais e converteu Inteligência Artificial no motor intelectual do seu negócio. Este é o seu <strong>nono livro</strong>, onde decodifica, pela primeira vez ao público geral, os fluxos precisos de alavancagem que permitem atender demandas High-Ticket operando de qualquer lugar do mundo.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-8 border-t border-white/10">
+                        <div>
+                            <span class="block text-4xl font-serif text-white mb-1">09</span>
+                            <span class="text-xs text-slate-500 uppercase tracking-widest">Livros Publicados</span>
+                        </div>
+                        <div>
+                            <span class="block text-4xl font-serif text-white mb-1">64+</span>
+                            <span class="text-xs text-slate-500 uppercase tracking-widest">Casos Complexos</span>
+                        </div>
+                        <div>
+                            <span class="block text-4xl font-serif text-white mb-1">40%</span>
+                            <span class="text-xs text-slate-500 uppercase tracking-widest">Taxa Superior de Êxito</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 relative z-20">
+        <div class="absolute inset-0 bg-dark-950"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold-900/20 via-dark-950 to-dark-950 pointer-events-none"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-16 leading-tight">
+                Adquira a arquitetura completa da<br/>
+                <span class="text-gradient-gold">Sua Nova Fábrica de Produção Intelectual</span>
+            </h2>
+            
+            <div class="glass-card p-1 relative rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                <div class="absolute inset-0 bg-gradient-to-r from-gold-500 via-yellow-200 to-gold-600 opacity-30"></div>
+                
+                <div class="relative bg-dark-900 p-8 md:p-14 rounded-xl flex flex-col md:flex-row items-center gap-12 text-left">
+                    
+                    <div class="w-full md:w-3/5">
+                        <h3 class="text-2xl font-bold text-white mb-6 uppercase tracking-wide">O que está incluído no Manual:</h3>
+                        
+                        <ul class="space-y-5 text-slate-300">
+                            <li class="flex items-start gap-4">
+                                <svg class="w-6 h-6 text-gold-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                                <div>
+                                    <strong class="text-white block">Livro Completo (Versão Digital)</strong>
+                                    <span class="text-sm text-slate-400">7 Capítulos detalhando a transição matemática do modelo tradicional para a operação hiper-lucrativa com I.A.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-6 h-6 text-gold-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                                <div>
+                                    <strong class="text-white block"> A Promptoteca do Estrategista</strong>
+                                    <span class="text-sm text-slate-400">Scripts exatos (Mega-Prompts) de comando para redigir Propostas High-Ticket e Auditorias Cegas de Contrato.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-6 h-6 text-gold-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                                <div>
+                                    <strong class="text-white block"> Planilha de ROI da Automação</strong>
+                                    <span class="text-sm text-slate-400">Acesso restrito à ferramenta matemática para calcular sua mitigação de custos de folha de pagamento.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="w-full md:w-2/5 flex flex-col items-center justify-center p-8 bg-dark-950/50 rounded-xl border border-white/5">
+                        <div class="text-center w-full">
+                            <p class="text-sm text-slate-400 mb-2 uppercase tracking-widest font-semibold">Oferta de Lançamento</p>
+                            <p class="text-slate-500 line-through text-2xl mb-1">R$ 47,90</p>
+                            <p class="text-7xl font-extrabold text-gradient-gold mb-8">R$ 19,90</p>
+                            
+                            <a href="LINK_DA_KIWIFY_AQUI" class="block w-full btn-shimmer text-dark-950 px-8 py-5 rounded-md font-bold text-lg uppercase tracking-wide transition-transform hover:scale-[1.02] shadow-[0_10px_30px_rgba(234,179,8,0.3)]">
+                                LIBERAR MEU ACESSO
+                            </a>
+                            <p class="text-xs text-slate-500 mt-5 flex items-center justify-center gap-1.5">
+                                <svg class="w-4 h-4 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+                                Checkout seguro processado pela Kiwify.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-dark-900 border-t border-white/5 z-10 relative">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8" x-data="{ activeAccordion: null }">
+            <div class="text-center mb-16">
+                <h2 class="text-gold-500 font-bold tracking-widest uppercase text-sm mb-4">Ainda com Dúvidas?</h2>
+                <h3 class="text-3xl font-serif font-bold text-white">Perguntas Frequentes</h3>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="glass-card border border-white/5 rounded-lg overflow-hidden transition-all duration-300">
+                    <button @click="activeAccordion = activeAccordion === 1? null : 1" class="flex justify-between items-center w-full p-6 text-left focus:outline-none hover:bg-white/5 transition-colors">
+                        <span class="font-semibold text-white text-lg">Preciso entender de programação para aplicar o método?</span>
+                        <svg class="w-5 h-5 text-gold-500 transform transition-transform duration-300" :class="{ 'rotate-180': activeAccordion === 1 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div x-show="activeAccordion === 1" x-collapse x-cloak class="p-6 pt-0 text-slate-400 text-base leading-relaxed border-t border-white/5 mt-2">
+                        De forma alguma. O livro é fundamentado na "Engenharia de Prompts", que consiste na comunicação em linguagem natural avançada estruturada (Framework C.O.R.E.), operando as versões Pro das I.As como se instruísse um associado humano experiente.
+                    </div>
+                </div>
+
+                <div class="glass-card border border-white/5 rounded-lg overflow-hidden transition-all duration-300">
+                    <button @click="activeAccordion = activeAccordion === 2? null : 2" class="flex justify-between items-center w-full p-6 text-left focus:outline-none hover:bg-white/5 transition-colors">
+                        <span class="font-semibold text-white text-lg">O método serve apenas para escritórios de advocacia?</span>
+                        <svg class="w-5 h-5 text-gold-500 transform transition-transform duration-300" :class="{ 'rotate-180': activeAccordion === 2 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div x-show="activeAccordion === 2" x-collapse x-cloak class="p-6 pt-0 text-slate-400 text-base leading-relaxed border-t border-white/5 mt-2">
+                        Não. Embora a base do autor seja o direito, os conceitos do Ecossistema Mínimo Viável, mitigação de custos e estruturação de atendimento blindado aplicam-se a consultorias empresariais, escritórios de contabilidade, arquitetura, clínicas e quaisquer negócios baseados na venda de capital intelectual.
+                    </div>
+                </div>
+
+                <div class="glass-card border border-white/5 rounded-lg overflow-hidden transition-all duration-300">
+                    <button @click="activeAccordion = activeAccordion === 3? null : 3" class="flex justify-between items-center w-full p-6 text-left focus:outline-none hover:bg-white/5 transition-colors">
+                        <span class="font-semibold text-white text-lg">O formato do livro é físico ou digital?</span>
+                        <svg class="w-5 h-5 text-gold-500 transform transition-transform duration-300" :class="{ 'rotate-180': activeAccordion === 3 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div x-show="activeAccordion === 3" x-collapse x-cloak class="p-6 pt-0 text-slate-400 text-base leading-relaxed border-t border-white/5 mt-2">
+                        Nesta oferta exclusiva de lançamento, você terá acesso imediato à versão 100% digital do manual. O link de acesso ao conteúdo e aos anexos bônus será enviado diretamente para o seu e-mail aprovado no checkout da Kiwify.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-dark-950 border-t border-white/5 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-slate-500 text-sm mb-4 font-medium">
+                Copyright © 2026 por Dr. Reginaldo Oliveira.<br/>
+                Todos os direitos reservados. OAB/SC 57.879.
+            </p>
+            <p class="text-slate-600 text-xs max-w-3xl mx-auto leading-relaxed">
+                Este site não configura um aconselhamento jurídico ou financeiro direto. As estratégias aqui descritas refletem a experiência mercadológica do autor e casos práticos de reestruturação Nômade Digital, servindo como modelo educacional. O processo de pagamento é gerido independentemente por tecnologia de ponta criptografada.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
